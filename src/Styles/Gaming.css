@@ -1,0 +1,81 @@
+.time{
+    margin-bottom: 30px;
+}
+.time p{
+    font-size: 18px;
+    color: red;
+}
+.option-container {
+    margin-top: 10px; 
+}
+.option-container p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10; 
+    padding: 10px; 
+    border: 2px solid #ccc; 
+    border-radius: 5px; 
+    background-color: #f9f9f9; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+.option-container p:hover {
+    background-color: #e0e0e0; 
+}
+
+.bottom-elem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+
+.bottom-elem > button{
+    border: none;
+  display: block;
+  position: relative;
+  padding: 8px 26px;
+  font-size: 17px;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  color: black;
+  z-index: 1;
+  font-family: inherit;
+  font-weight: 500;
+}
+.bottom-elem > button span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 2px solid black;
+}
+.bottom-elem > button span::before{
+    content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: var(--lightgray);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 1s;
+}
+.bottom-elem > button:hover span::before{
+    transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: black;
+}
+.bottom-elem > button:hover{
+    color: white;
+}
+.bottom-elem > button:active span::before{
+    background: black;
+}

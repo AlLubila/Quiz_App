@@ -1,0 +1,10 @@
+A. FOR START.JSX COMPONENT
+
+Set initially true welcome state
+Set initially false start state
+Start Button event
+set false welcome state to hide START COMPONENT
+set true start state to make appear GAMING COMPONENT
+set a setInterval to decrease Timer after each 1s
+
+
