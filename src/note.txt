@@ -13,3 +13,14 @@ change background of option selected
 make options block disable after one selected or timer is 0
 To move to next question after button clicked
 
+C. FOR FINISHED.JSX
+
+Display Score:
+If option selected is equal to answer + 1
+else + 0
+
+
+
+Restart the game
+Click on button
+set: Start to false, lastQuestion to false, score to 0, welcome to true

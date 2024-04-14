@@ -1,5 +1,14 @@
-import "../Styles/Finished.css"
-export const Finished = () => {
+import "../Styles/Score.css"
+export const Score = ({score,setScore, setStart, setLastQuestion, setWelcome}) => {
+
+  //Restart the game
+// set: Start to false, lastQuestion to false, score to 0
+  const handleRestart = ()=>{
+    setStart(false)
+    setLastQuestion(false)
+    setScore(0)
+    setWelcome(true)
+  }
     return (
         <>
         <div className="big-container">
@@ -12,11 +21,11 @@ export const Finished = () => {
             <p>Quiz Completed!</p>
             </div>
            <div className="score">
-           <h2>Your score: 4</h2>
+           <h2>Your score: {score} </h2>
            </div>
             
             <div className="btn-again">
-            <button>Play again
+            <button onClick={handleRestart}>Play again
                 <span></span>
             </button>
             </div>
