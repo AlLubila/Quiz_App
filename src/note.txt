@@ -7,4 +7,9 @@ set false welcome state to hide START COMPONENT
 set true start state to make appear GAMING COMPONENT
 set a setInterval to decrease Timer after each 1s
 
+B. FOR GAMING.JSX COMPONENT
+
+change background of option selected
+make options block disable after one selected or timer is 0
+To move to next question after button clicked
 

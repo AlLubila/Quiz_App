@@ -79,3 +79,17 @@
 .bottom-elem > button:active span::before{
     background: black;
 }
+
+.option-container .para{
+    background-color: #919191;
+    color: white;
+}
+.option-container .para:hover{
+    background-color: #919191;
+    color: white;
+}
+
+.disabled{
+    pointer-events: none;
+    
+}

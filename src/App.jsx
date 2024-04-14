@@ -1,7 +1,7 @@
 import './index.css'
-import { Start } from "./Components/Start"
-import { Gaming } from './Components/Gaming'
-import { Finished } from './Components/Finished'
+import { Start } from "./Templates/Start"
+import { Gaming } from './Templates/Gaming'
+import { Finished } from './Templates/Finished'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
@@ -13,8 +13,8 @@ const [welcome, setWelcome] = useState(true)
 // Set initially false start state
 const [start, setStart] = useState(false)
 
-// Set initially timer to 10
-const [timer, setTimer] = useState(10)
+// Set initially lastQuestion to false 
+const [lastQuestion, setLastQuestion] = useState(false)
 
 // Start Button event
 const handleStart = () => {
@@ -25,23 +25,13 @@ const handleStart = () => {
     setStart(true)
 }
 
-// set a setInterval to decrease Timer after each 1s
-useEffect(()=>{
-    if (start && timer > 0) {
-        setInterval(() => {
-            setTimer(prevTimer => prevTimer - 1)
-        }, 1000);
-    }
-})
-
-
 
 
     return (
         <>
         {welcome && <Start handleStart={handleStart}/>}
-       {start && <Gaming/>}
-      {/*  <Finished/> */}
+       {start && <Gaming setLastQuestion={setLastQuestion}/>}
+       {lastQuestion && <Finished/>}
         </>
     )
 }
